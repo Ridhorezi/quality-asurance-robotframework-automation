@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20230812 00:57:15.293" rpa="false" schemaversion="4">
+<suite id="s1" name="loginInvalid" source="D:\qa-project\qa-automation-robotframework\step\login\loginInvalid.robot">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>${WebSauceDemo}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230812 00:57:15.450" level="INFO">Opening browser 'chrome' to base url 'https://saucedemo.com/'.</msg>
+<msg timestamp="20230812 00:57:15.709" level="WARN">The chromedriver version (114.0.5735.90) detected in PATH at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\chromedriver.exe might not be compatible with the detected chrome version (115.0.5790.171); currently, chromedriver 115.0.5790.170 is recommended for chrome 115.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20230812 00:57:15.450" endtime="20230812 00:57:17.572"/>
+</kw>
+<test id="s1-t1" name="User login with invalid data" line="32">
+<kw name="Input invalid username">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${UsernameField}</arg>
+<arg>wrong_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230812 00:57:17.572" level="INFO">Typing text 'wrong_user' into text field '//input[@id='user-name']'.</msg>
+<status status="PASS" starttime="20230812 00:57:17.572" endtime="20230812 00:57:17.732"/>
+</kw>
+<status status="PASS" starttime="20230812 00:57:17.572" endtime="20230812 00:57:17.732"/>
+</kw>
+<kw name="Input invalid password">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PasswordField}</arg>
+<arg>wrong_password</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230812 00:57:17.733" level="INFO">Typing text 'wrong_password' into text field '//input[@id='password']'.</msg>
+<status status="PASS" starttime="20230812 00:57:17.733" endtime="20230812 00:57:17.845"/>
+</kw>
+<status status="PASS" starttime="20230812 00:57:17.732" endtime="20230812 00:57:17.845"/>
+</kw>
+<kw name="Click button login">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LoginButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230812 00:57:17.846" level="INFO">Clicking element '//*[@id="login-button"]'.</msg>
+<status status="PASS" starttime="20230812 00:57:17.845" endtime="20230812 00:57:17.932"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230812 00:57:20.932" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230812 00:57:17.932" endtime="20230812 00:57:20.932"/>
+</kw>
+<status status="PASS" starttime="20230812 00:57:17.845" endtime="20230812 00:57:20.932"/>
+</kw>
+<kw name="Verify error message">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Username and password do not match any user in this service</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230812 00:57:20.947" level="INFO">Current page contains text 'Username and password do not match any user in this service'.</msg>
+<status status="PASS" starttime="20230812 00:57:20.933" endtime="20230812 00:57:20.947"/>
+</kw>
+<status status="PASS" starttime="20230812 00:57:20.933" endtime="20230812 00:57:20.947"/>
+</kw>
+<status status="PASS" starttime="20230812 00:57:17.572" endtime="20230812 00:57:20.947"/>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230812 00:57:20.948" endtime="20230812 00:57:23.147"/>
+</kw>
+<status status="PASS" starttime="20230812 00:57:15.293" endtime="20230812 00:57:23.147"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="loginInvalid">loginInvalid</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230812 00:57:15.709" level="WARN">The chromedriver version (114.0.5735.90) detected in PATH at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\chromedriver.exe might not be compatible with the detected chrome version (115.0.5790.171); currently, chromedriver 115.0.5790.170 is recommended for chrome 115.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>
